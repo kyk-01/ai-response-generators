@@ -1,0 +1,1229 @@
+2025-11-17T15:27:34.180+09:00  INFO 34832 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 34832 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:27:34.181+09:00  INFO 34832 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:27:34.283+09:00  INFO 34832 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:27:34.283+09:00  INFO 34832 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:27:34.622+09:00  WARN 34832 --- [GPT] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration.anthropicApi
+2025-11-17T15:27:34.626+09:00  INFO 34832 --- [GPT] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-17T15:27:34.635+09:00 ERROR 34832 --- [GPT] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration.anthropicApi
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:99) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:191) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+Caused by: java.lang.IllegalStateException: @ConditionalOnMissingBean did not specify a bean using type, name or annotation and the attempt to deduce the bean's type failed
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.validate(OnBeanCondition.java:631) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.<init>(OnBeanCondition.java:578) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:142) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	... 22 common frames omitted
+Caused by: org.springframework.boot.autoconfigure.condition.OnBeanCondition$BeanTypeDeductionException: Failed to deduce bean type for org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration.anthropicApi
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.deducedBeanTypeForBeanMethod(OnBeanCondition.java:660) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.deducedBeanType(OnBeanCondition.java:650) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.<init>(OnBeanCondition.java:571) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	... 24 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.2.12.jar:6.2.12]
+	at org.springframework.util.ReflectionUtils.findMethod(ReflectionUtils.java:238) ~[spring-core-6.2.12.jar:6.2.12]
+	at org.springframework.util.ReflectionUtils.findMethod(ReflectionUtils.java:218) ~[spring-core-6.2.12.jar:6.2.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.findBeanMethod(OnBeanCondition.java:689) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.getMethodReturnType(OnBeanCondition.java:684) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.getReturnType(OnBeanCondition.java:668) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition$Spec.deducedBeanTypeForBeanMethod(OnBeanCondition.java:657) ~[spring-boot-autoconfigure-3.5.7.jar:3.5.7]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/ai/model/function/FunctionCallbackResolver
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.2.12.jar:6.2.12]
+	... 32 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.ai.model.function.FunctionCallbackResolver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 36 common frames omitted
+
+2025-11-17T15:28:59.248+09:00  INFO 16388 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 16388 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:28:59.249+09:00  INFO 16388 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:28:59.359+09:00  INFO 16388 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:28:59.359+09:00  INFO 16388 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:28:59.738+09:00  INFO 16388 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T15:28:59.749+09:00  INFO 16388 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2025-11-17T15:29:00.014+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T15:29:00.014+09:00 DEBUG 16388 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:29:00.014+09:00 DEBUG 16388 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:29:00.015+09:00 DEBUG 16388 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T15:29:00.025+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T15:29:00.038+09:00  INFO 16388 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T15:29:00.045+09:00  INFO 16388 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T15:29:00.046+09:00  INFO 16388 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T15:29:00.063+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T15:29:00.066+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@64261c43] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T15:29:00.072+09:00  INFO 16388 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T15:29:00.073+09:00  INFO 16388 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 713 ms
+2025-11-17T15:29:00.086+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T15:29:00.094+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T15:29:00.102+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T15:29:00.103+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.103+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.103+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.133+09:00  INFO 16388 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T15:29:00.221+09:00  INFO 16388 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@64d9ac19
+2025-11-17T15:29:00.224+09:00  INFO 16388 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T15:29:00.286+09:00  INFO 16388 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T15:29:00.309+09:00  INFO 16388 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T15:29:00.327+09:00  INFO 16388 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T15:29:00.460+09:00  INFO 16388 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T15:29:00.494+09:00  WARN 16388 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T15:29:00.507+09:00  INFO 16388 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T15:29:00.626+09:00  INFO 16388 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T15:29:00.628+09:00  INFO 16388 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:29:00.823+09:00  WARN 16388 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T15:29:00.835+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@1aae6ac8] at [/index.html] making total cache size [1052]
+2025-11-17T15:29:00.871+09:00 DEBUG 16388 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-11-17T15:29:00.891+09:00 DEBUG 16388 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@600eec46] at [/] making total cache size [1553]
+2025-11-17T15:29:00.892+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T15:29:00.905+09:00 DEBUG 16388 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T15:29:00.932+09:00 DEBUG 16388 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T15:29:00.973+09:00  WARN 16388 --- [GPT] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'anthropicApi' defined in class path resource [org/springframework/ai/model/anthropic/autoconfigure/AnthropicChatAutoConfiguration.class]: Failed to instantiate [org.springframework.ai.anthropic.api.AnthropicApi]: Factory method 'anthropicApi' threw exception with message: apiKey cannot be null
+2025-11-17T15:29:00.974+09:00  INFO 16388 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:29:00.976+09:00  INFO 16388 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T15:29:00.982+09:00  INFO 16388 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T15:29:00.983+09:00  INFO 16388 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-17T15:29:00.983+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Unregister host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.983+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Unregister Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.983+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Unregister Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.c.core.ApplicationFilterConfig       : JMX de-registration complete for filter of type [org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter] and name [requestContextFilter]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.c.core.ApplicationFilterConfig       : JMX de-registration complete for filter of type [org.apache.tomcat.websocket.server.WsFilter] and name [Tomcat WebSocket (JSR356) Filter]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.c.core.ApplicationFilterConfig       : JMX de-registration complete for filter of type [org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean$1] and name [springSessionRepositoryFilter]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.c.core.ApplicationFilterConfig       : JMX de-registration complete for filter of type [org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter] and name [characterEncodingFilter]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.c.core.ApplicationFilterConfig       : JMX de-registration complete for filter of type [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter] and name [formContentFilter]
+2025-11-17T15:29:00.984+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : No persisted sessions to unload
+2025-11-17T15:29:00.985+09:00 DEBUG 16388 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Stopping this Loader
+2025-11-17T15:29:00.990+09:00  INFO 16388 --- [GPT] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-17T15:29:01.000+09:00 ERROR 16388 --- [GPT] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'anthropicApi' defined in class path resource [org/springframework/ai/model/anthropic/autoconfigure/AnthropicChatAutoConfiguration.class]: Failed to instantiate [org.springframework.ai.anthropic.api.AnthropicApi]: Factory method 'anthropicApi' threw exception with message: apiKey cannot be null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ai.anthropic.api.AnthropicApi]: Factory method 'anthropicApi' threw exception with message: apiKey cannot be null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.12.jar:6.2.12]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 26 common frames omitted
+Caused by: java.lang.IllegalArgumentException: apiKey cannot be null
+	at org.springframework.util.Assert.notNull(Assert.java:181) ~[spring-core-6.2.12.jar:6.2.12]
+	at org.springframework.ai.anthropic.api.AnthropicApi$Builder.apiKey(AnthropicApi.java:1367) ~[spring-ai-anthropic-1.0.0-20250519.092143-1469.jar:1.0.0-SNAPSHOT]
+	at org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration.anthropicApi(AnthropicChatAutoConfiguration.java:73) ~[spring-ai-autoconfigure-model-anthropic-1.0.0-20250519.092143-303.jar:1.0.0-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.12.jar:6.2.12]
+	... 29 common frames omitted
+
+2025-11-17T15:31:19.865+09:00  INFO 25648 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 25648 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:31:19.866+09:00  INFO 25648 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:31:19.973+09:00  INFO 25648 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:31:19.973+09:00  INFO 25648 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:31:20.354+09:00  INFO 25648 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T15:31:20.364+09:00  INFO 25648 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-11-17T15:31:20.643+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T15:31:20.643+09:00 DEBUG 25648 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:31:20.644+09:00 DEBUG 25648 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:31:20.644+09:00 DEBUG 25648 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T15:31:20.655+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T15:31:20.668+09:00  INFO 25648 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T15:31:20.675+09:00  INFO 25648 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T15:31:20.675+09:00  INFO 25648 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T15:31:20.694+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T15:31:20.697+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@ae5438f] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T15:31:20.705+09:00  INFO 25648 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T15:31:20.705+09:00  INFO 25648 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 732 ms
+2025-11-17T15:31:20.719+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T15:31:20.729+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T15:31:20.736+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T15:31:20.737+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:31:20.737+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:31:20.737+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:31:20.770+09:00  INFO 25648 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T15:31:20.852+09:00  INFO 25648 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7881b6dd
+2025-11-17T15:31:20.854+09:00  INFO 25648 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T15:31:20.911+09:00  INFO 25648 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T15:31:20.935+09:00  INFO 25648 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T15:31:20.950+09:00  INFO 25648 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T15:31:21.095+09:00  INFO 25648 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T15:31:21.126+09:00  WARN 25648 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T15:31:21.137+09:00  INFO 25648 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T15:31:21.257+09:00  INFO 25648 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T15:31:21.258+09:00  INFO 25648 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:31:21.567+09:00  WARN 25648 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T15:31:21.577+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@a65ae53] at [/index.html] making total cache size [1052]
+2025-11-17T15:31:21.620+09:00 DEBUG 25648 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-11-17T15:31:21.643+09:00 DEBUG 25648 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@6b192c95] at [/] making total cache size [1553]
+2025-11-17T15:31:21.645+09:00 DEBUG 25648 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T15:31:21.661+09:00 DEBUG 25648 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T15:31:21.696+09:00 DEBUG 25648 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T15:31:21.835+09:00  WARN 25648 --- [GPT] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-17T15:31:21.846+09:00  INFO 25648 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-17T15:31:21.851+09:00  INFO 25648 --- [GPT] [restartedMain] GPT.GptApplication                       : Started GptApplication in 2.199 seconds (process running for 2.416)
+2025-11-17T15:32:00.040+09:00  WARN 25648 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:32:00.050+09:00 ERROR 25648 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293283) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:33:00.016+09:00  WARN 25648 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:33:00.025+09:00 ERROR 25648 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293283) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:34:00.023+09:00  WARN 25648 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:34:00.034+09:00 ERROR 25648 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293283) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:35:00.020+09:00  WARN 25648 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:35:00.030+09:00 ERROR 25648 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293283) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:35:06.015+09:00  INFO 25648 --- [GPT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-17T15:35:06.072+09:00  INFO 25648 --- [GPT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-17T15:35:06.074+09:00  INFO 25648 --- [GPT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:35:06.076+09:00  INFO 25648 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T15:35:06.082+09:00  INFO 25648 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T15:35:17.863+09:00  INFO 29456 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 29456 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:35:17.864+09:00  INFO 29456 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:35:17.965+09:00  INFO 29456 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:35:17.965+09:00  INFO 29456 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:35:18.353+09:00  INFO 29456 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T15:35:18.362+09:00  INFO 29456 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-11-17T15:35:18.673+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T15:35:18.674+09:00 DEBUG 29456 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:35:18.674+09:00 DEBUG 29456 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:35:18.674+09:00 DEBUG 29456 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T15:35:18.687+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T15:35:18.701+09:00  INFO 29456 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T15:35:18.709+09:00  INFO 29456 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T15:35:18.709+09:00  INFO 29456 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T15:35:18.730+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T15:35:18.733+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@56676756] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T15:35:18.741+09:00  INFO 29456 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T15:35:18.741+09:00  INFO 29456 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 775 ms
+2025-11-17T15:35:18.756+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T15:35:18.765+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T15:35:18.772+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T15:35:18.773+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:35:18.773+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:35:18.773+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:35:18.806+09:00  INFO 29456 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T15:35:18.902+09:00  INFO 29456 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@19d099a4
+2025-11-17T15:35:18.903+09:00  INFO 29456 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T15:35:18.954+09:00  INFO 29456 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T15:35:18.979+09:00  INFO 29456 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T15:35:18.997+09:00  INFO 29456 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T15:35:19.149+09:00  INFO 29456 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T15:35:19.183+09:00  WARN 29456 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T15:35:19.195+09:00  INFO 29456 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T15:35:19.323+09:00  INFO 29456 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T15:35:19.325+09:00  INFO 29456 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:35:19.602+09:00  WARN 29456 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T15:35:19.616+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@46d01f84] at [/index.html] making total cache size [1052]
+2025-11-17T15:35:19.664+09:00 DEBUG 29456 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-11-17T15:35:19.683+09:00 DEBUG 29456 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@22bf5954] at [/] making total cache size [1553]
+2025-11-17T15:35:19.684+09:00 DEBUG 29456 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T15:35:19.697+09:00 DEBUG 29456 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T15:35:19.722+09:00 DEBUG 29456 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T15:35:19.833+09:00  WARN 29456 --- [GPT] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-17T15:35:19.844+09:00  INFO 29456 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-17T15:35:19.849+09:00  INFO 29456 --- [GPT] [restartedMain] GPT.GptApplication                       : Started GptApplication in 2.203 seconds (process running for 2.417)
+2025-11-17T15:36:00.062+09:00  WARN 29456 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:36:00.072+09:00 ERROR 29456 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293301) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:37:00.023+09:00  WARN 29456 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:37:00.031+09:00 ERROR 29456 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293301) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:37:29.822+09:00  INFO 29456 --- [GPT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-17T15:37:29.869+09:00  INFO 29456 --- [GPT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-17T15:37:29.872+09:00  INFO 29456 --- [GPT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:37:29.873+09:00  INFO 29456 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T15:37:29.878+09:00  INFO 29456 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T15:37:31.528+09:00  INFO 33788 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 33788 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:37:31.529+09:00  INFO 33788 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:37:31.641+09:00  INFO 33788 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:37:31.641+09:00  INFO 33788 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:37:32.017+09:00  INFO 33788 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T15:37:32.026+09:00  INFO 33788 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-11-17T15:37:32.299+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T15:37:32.299+09:00 DEBUG 33788 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:37:32.299+09:00 DEBUG 33788 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:37:32.300+09:00 DEBUG 33788 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T15:37:32.309+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T15:37:32.321+09:00  INFO 33788 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T15:37:32.329+09:00  INFO 33788 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T15:37:32.329+09:00  INFO 33788 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T15:37:32.345+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T15:37:32.348+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@496119ad] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T15:37:32.359+09:00  INFO 33788 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T15:37:32.359+09:00  INFO 33788 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 718 ms
+2025-11-17T15:37:32.380+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T15:37:32.393+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\0A0E19CA2D46454E1F4AB4E0EB8EB1F05559CFF5\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T15:37:32.406+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T15:37:32.407+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:37:32.408+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:37:32.408+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:37:32.441+09:00  INFO 33788 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T15:37:32.531+09:00  INFO 33788 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@50bab05a
+2025-11-17T15:37:32.532+09:00  INFO 33788 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T15:37:32.585+09:00  INFO 33788 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T15:37:32.615+09:00  INFO 33788 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T15:37:32.638+09:00  INFO 33788 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T15:37:32.775+09:00  INFO 33788 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T15:37:32.804+09:00  WARN 33788 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T15:37:32.817+09:00  INFO 33788 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T15:37:33.117+09:00  INFO 33788 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T15:37:33.118+09:00  INFO 33788 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:37:33.422+09:00  WARN 33788 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T15:37:33.433+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@67e46a5b] at [/index.html] making total cache size [1052]
+2025-11-17T15:37:33.473+09:00 DEBUG 33788 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-11-17T15:37:33.494+09:00 DEBUG 33788 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@3ef2531e] at [/] making total cache size [1553]
+2025-11-17T15:37:33.495+09:00 DEBUG 33788 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T15:37:33.511+09:00 DEBUG 33788 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T15:37:33.544+09:00 DEBUG 33788 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T15:37:33.671+09:00  WARN 33788 --- [GPT] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-17T15:37:33.686+09:00  INFO 33788 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-17T15:37:33.692+09:00  INFO 33788 --- [GPT] [restartedMain] GPT.GptApplication                       : Started GptApplication in 2.374 seconds (process running for 2.577)
+2025-11-17T15:38:00.062+09:00  WARN 33788 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:38:00.072+09:00 ERROR 33788 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293316) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:39:00.027+09:00  WARN 33788 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:39:00.037+09:00 ERROR 33788 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293316) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:40:00.020+09:00  WARN 33788 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:40:00.030+09:00 ERROR 33788 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293316) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:41:00.018+09:00  WARN 33788 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:41:00.027+09:00 ERROR 33788 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293316) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:42:00.020+09:00  WARN 33788 --- [GPT] [spring-session-1] o.m.jdbc.message.server.ErrorPacket      : Error: 1146-42S02: Table 'ecloud-member.SPRING_SESSION' doesn't exist
+2025-11-17T15:42:00.029+09:00 ERROR 33788 --- [GPT] [spring-session-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1016) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1026) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:649) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-6.2.12.jar:6.2.12]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:648) ~[spring-session-jdbc-3.5.3.jar:3.5.3]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96) ~[spring-context-6.2.12.jar:6.2.12]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.sql.SQLSyntaxErrorException: (conn=293316) Table 'ecloud-member.SPRING_SESSION' doesn't exist
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:292) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:386) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.message.ClientMessage.readPacket(ClientMessage.java:187) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readPacket(StandardClient.java:1376) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResults(StandardClient.java:1315) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.readResponse(StandardClient.java:1234) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.client.impl.StandardClient.execute(StandardClient.java:1158) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:91) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:345) ~[mariadb-java-client-3.5.6.jar:na]
+	at org.mariadb.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:322) ~[mariadb-java-client-3.5.6.jar:na]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658) ~[spring-jdbc-6.2.12.jar:6.2.12]
+	... 14 common frames omitted
+
+2025-11-17T15:42:42.771+09:00  INFO 33788 --- [GPT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-17T15:42:42.822+09:00  INFO 33788 --- [GPT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-17T15:42:42.825+09:00  INFO 33788 --- [GPT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:42:42.826+09:00  INFO 33788 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T15:42:42.832+09:00  INFO 33788 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T15:42:45.356+09:00  INFO 28924 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 28924 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T15:42:45.357+09:00  INFO 28924 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T15:42:45.470+09:00  INFO 28924 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T15:42:45.470+09:00  INFO 28924 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T15:42:45.832+09:00  INFO 28924 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T15:42:45.844+09:00  INFO 28924 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-11-17T15:42:46.117+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T15:42:46.117+09:00 DEBUG 28924 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:42:46.117+09:00 DEBUG 28924 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T15:42:46.117+09:00 DEBUG 28924 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T15:42:46.127+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T15:42:46.140+09:00  INFO 28924 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T15:42:46.146+09:00  INFO 28924 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T15:42:46.146+09:00  INFO 28924 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T15:42:46.161+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T15:42:46.164+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@5f889487] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T15:42:46.169+09:00  INFO 28924 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T15:42:46.169+09:00  INFO 28924 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 699 ms
+2025-11-17T15:42:46.179+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T15:42:46.188+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\1FFC248D09EEAAD15731C48AEDD415E1E441B036\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\1FFC248D09EEAAD15731C48AEDD415E1E441B036\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T15:42:46.196+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T15:42:46.197+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:42:46.197+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T15:42:46.197+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T15:42:46.269+09:00  INFO 28924 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T15:42:46.299+09:00  INFO 28924 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T15:42:46.317+09:00  INFO 28924 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T15:42:46.474+09:00  INFO 28924 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T15:42:46.488+09:00  INFO 28924 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T15:42:46.550+09:00  INFO 28924 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7dd3f412
+2025-11-17T15:42:46.551+09:00  INFO 28924 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T15:42:46.567+09:00  WARN 28924 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T15:42:46.579+09:00  INFO 28924 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T15:42:46.875+09:00  INFO 28924 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T15:42:46.877+09:00  INFO 28924 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T15:42:47.043+09:00  WARN 28924 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T15:42:47.056+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@7f5124ea] at [/index.html] making total cache size [1052]
+2025-11-17T15:42:47.089+09:00 DEBUG 28924 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2025-11-17T15:42:47.111+09:00 DEBUG 28924 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@3732af28] at [/] making total cache size [1553]
+2025-11-17T15:42:47.113+09:00 DEBUG 28924 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T15:42:47.130+09:00 DEBUG 28924 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T15:42:47.158+09:00 DEBUG 28924 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T15:42:47.291+09:00  WARN 28924 --- [GPT] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-17T15:42:47.305+09:00  INFO 28924 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-17T15:42:47.310+09:00  INFO 28924 --- [GPT] [restartedMain] GPT.GptApplication                       : Started GptApplication in 2.163 seconds (process running for 2.372)
+2025-11-17T16:30:23.161+09:00  INFO 28924 --- [GPT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-17T16:30:23.210+09:00  INFO 28924 --- [GPT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-17T16:30:23.212+09:00  INFO 28924 --- [GPT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:30:23.214+09:00  INFO 28924 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-17T16:30:23.220+09:00  INFO 28924 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-17T16:30:25.178+09:00  INFO 37660 --- [GPT] [restartedMain] GPT.GptApplication                       : Starting GptApplication using Java 17.0.12 with PID 37660 (D:\GPT\GPT\target\classes started by kimyounkyung in D:\GPT)
+2025-11-17T16:30:25.179+09:00  INFO 37660 --- [GPT] [restartedMain] GPT.GptApplication                       : The following 1 profile is active: "local"
+2025-11-17T16:30:25.278+09:00  INFO 37660 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-17T16:30:25.279+09:00  INFO 37660 --- [GPT] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-17T16:30:25.668+09:00  INFO 37660 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-17T16:30:25.733+09:00  INFO 37660 --- [GPT] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+2025-11-17T16:30:25.998+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardHost[localhost]] to container [StandardEngine[Tomcat]]
+2025-11-17T16:30:25.998+09:00 DEBUG 37660 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T16:30:25.998+09:00 DEBUG 37660 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\kimyounkyung\.m2\repository\org\springframework\boot\spring-boot\3.5.7\spring-boot-3.5.7.jar
+2025-11-17T16:30:25.999+09:00 DEBUG 37660 --- [GPT] [restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2025-11-17T16:30:26.013+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [TomcatEmbeddedContext[]] to container [StandardEngine[Tomcat].StandardHost[localhost]]
+2025-11-17T16:30:26.027+09:00  INFO 37660 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-17T16:30:26.035+09:00  INFO 37660 --- [GPT] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-17T16:30:26.035+09:00  INFO 37660 --- [GPT] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-17T16:30:26.055+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.apache.catalina.loader.WebappLoader    : Starting this Loader
+2025-11-17T16:30:26.057+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [531] for item [org.apache.catalina.webresources.CachedResource@2ace9c3a] at [/WEB-INF/classes] making total cache size [531]
+2025-11-17T16:30:26.064+09:00  INFO 37660 --- [GPT] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-17T16:30:26.065+09:00  INFO 37660 --- [GPT] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 785 ms
+2025-11-17T16:30:26.076+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.core.ContainerBase   : Add container child [StandardWrapper[dispatcherServlet]] to container [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
+2025-11-17T16:30:26.086+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.a.catalina.session.StandardManager     : Persisted data file [C:\Users\KIMYOU~1\AppData\Local\Temp\1FFC248D09EEAAD15731C48AEDD415E1E441B036\servlet-sessions\SESSIONS.ser] was not found
+
+java.io.FileNotFoundException: C:\Users\KIMYOU~1\AppData\Local\Temp\1FFC248D09EEAAD15731C48AEDD415E1E441B036\servlet-sessions\SESSIONS.ser (지정된 파일을 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111) ~[na:na]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:185) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:154) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:343) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4479) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:770) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1191) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:747) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:868) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:436) ~[tomcat-embed-core-10.1.48.jar:10.1.48]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.12.jar:6.2.12]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.7.jar:3.5.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.7.jar:3.5.7]
+	at GPT.GptApplication.main(GptApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.7.jar:3.5.7]
+
+2025-11-17T16:30:26.094+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.mapper.Mapper        : Registered host [localhost]
+2025-11-17T16:30:26.095+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2025-11-17T16:30:26.095+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register Context [] for service [StandardService[Tomcat]]
+2025-11-17T16:30:26.095+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.apache.catalina.mapper.MapperListener  : Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2025-11-17T16:30:26.179+09:00  INFO 37660 --- [GPT] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-17T16:30:26.212+09:00  INFO 37660 --- [GPT] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-17T16:30:26.232+09:00  INFO 37660 --- [GPT] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-17T16:30:26.379+09:00  INFO 37660 --- [GPT] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-17T16:30:26.395+09:00  INFO 37660 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-17T16:30:26.476+09:00  INFO 37660 --- [GPT] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@f4c966c
+2025-11-17T16:30:26.477+09:00  INFO 37660 --- [GPT] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-17T16:30:26.494+09:00  WARN 37660 --- [GPT] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-17T16:30:26.508+09:00  INFO 37660 --- [GPT] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-17T16:30:26.817+09:00  INFO 37660 --- [GPT] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-17T16:30:26.818+09:00  INFO 37660 --- [GPT] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-17T16:30:27.074+09:00  WARN 37660 --- [GPT] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-17T16:30:27.084+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [521] for item [org.apache.catalina.webresources.CachedResource@2fb52381] at [/index.html] making total cache size [1052]
+2025-11-17T16:30:27.121+09:00 DEBUG 37660 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2025-11-17T16:30:27.146+09:00 DEBUG 37660 --- [GPT] [restartedMain] org.apache.catalina.webresources.Cache   : Increased cache size by [501] for item [org.apache.catalina.webresources.CachedResource@6b580a73] at [/] making total cache size [1553]
+2025-11-17T16:30:27.147+09:00 DEBUG 37660 --- [GPT] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-11-17T16:30:27.162+09:00 DEBUG 37660 --- [GPT] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-11-17T16:30:27.194+09:00 DEBUG 37660 --- [GPT] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-11-17T16:30:27.342+09:00  WARN 37660 --- [GPT] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-17T16:30:27.357+09:00  INFO 37660 --- [GPT] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-17T16:30:27.362+09:00  INFO 37660 --- [GPT] [restartedMain] GPT.GptApplication                       : Started GptApplication in 2.401 seconds (process running for 2.621)

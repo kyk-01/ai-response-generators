@@ -1,0 +1,5 @@
+2025-11-18T09:09:37.296+09:00  INFO 37660 --- [GPT] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-18T09:09:37.360+09:00  INFO 37660 --- [GPT] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-18T09:09:37.362+09:00  INFO 37660 --- [GPT] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-18T09:09:37.363+09:00  INFO 37660 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-18T09:09:37.369+09:00  INFO 37660 --- [GPT] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
